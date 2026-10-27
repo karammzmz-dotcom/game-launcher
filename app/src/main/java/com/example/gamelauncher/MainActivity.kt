@@ -125,6 +125,7 @@ fun Modifier.padA(f: () -> Unit) = onKeyEvent {
     if (it.type == KeyEventType.KeyUp && it.key == Key.ButtonA) { f(); true } else false
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun Tile(c: Console, app: App, g: Cfg, onOpen: () -> Unit, onEdit: () -> Unit, mod: Modifier = Modifier) {
     val h = listOf(84, 112, 150, 112)[g.size].dp
